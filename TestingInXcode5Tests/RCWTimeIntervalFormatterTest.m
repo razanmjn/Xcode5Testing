@@ -45,7 +45,7 @@
     XCTAssertEqualObjects(output, @"2h 20s");
 }
 
-- (void)test9336Days3Hours20Minutes10Seconds {
+- (void)test1000Days3Hours20Minutes10Seconds {
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
