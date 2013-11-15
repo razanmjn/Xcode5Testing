@@ -28,9 +28,10 @@
 
 - (NSString *)stringFromTimeInterval:(NSTimeInterval)interval {
     NSUInteger unitFlags = NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+    NSDate *now = [NSDate date];
     NSDateComponents *components = [_calendar components:unitFlags
-                                                fromDate:[NSDate date]
-                                                  toDate:[NSDate dateWithTimeIntervalSinceNow:interval]
+                                                fromDate:now
+                                                  toDate:[now dateByAddingTimeInterval:interval]
                                                  options:0];
 
     NSMutableArray *parts = [NSMutableArray array];;
