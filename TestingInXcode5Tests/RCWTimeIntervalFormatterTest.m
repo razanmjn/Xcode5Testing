@@ -49,7 +49,7 @@
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *dateComponents = [[NSDateComponents alloc] init];
-    dateComponents.day = 9336;
+    dateComponents.day = 1000;
     dateComponents.hour = 3;
     dateComponents.minute = 20;
     dateComponents.second = 10;
@@ -57,7 +57,7 @@
     NSTimeInterval interval = [future timeIntervalSinceDate:now];
 
     NSString *output = [self.formatter stringFromTimeInterval:interval];
-    XCTAssertEqualObjects(output, @"9,336d 3h 20m 10s");
+    XCTAssertEqualObjects(output, @"1,000d 3h 20m 10s");
 }
 
 @end
